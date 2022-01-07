@@ -1,3 +1,4 @@
+/*
 package main
 
 import (
@@ -19,10 +20,10 @@ type Movie struct {
 }
 
 type Movies struct {
-	Name        string 
-	Description string 
-	Length      int    
-	Is_Seen     bool   
+	Name        string
+	Description string
+	Length      int
+	Is_Seen     bool
 }
 
 type person struct {
@@ -189,15 +190,15 @@ func main() {
 	fruits = append(fruits, fru{"papaya", 15, "orange/green", false})
 	fruits = append(fruits, fru{"mango", 5, "yellow", true})
 
-	/* another way to do the above is the following  ~~~~~SLICES~~~~~
+	 another way to do the above is the following  ~~~~~SLICES~~~~~
 
-	fruits := []fru{
-		{"apple",5,"red",true} ,
-		{"banana",8,"yellow",true} ,
-		{"papaya",15,"orange/green",false} ,
-		{"mango",5,"yellow",true} ,
-		}
-	*/
+	// fruits := []fru{
+	// 	{"apple",5,"red",true} ,
+	// 	{"banana",8,"yellow",true} ,
+	// 	{"papaya",15,"orange/green",false} ,
+	// 	{"mango",5,"yellow",true} ,
+	// 	}
+
 	for _, fruit := range fruits {
 		log.Println(fruit.color, fruit.fruit, fruit.perf, fruit.size)
 	}
@@ -260,14 +261,14 @@ func main() {
 			"is_seen": true
 		}
 	]`
-	// reading json into a struct 
+	// reading json into a struct
 	err := json.Unmarshal([]byte(myJson), &unmarshalled)
 	if err != nil {
 		log.Println("error unmarshalling json", err)
 	}
 	log.Println("unmarshalled:", unmarshalled)
 
-	// writing json from a struct 
+	// writing json from a struct
 	maze_runner := Movies{
 		Name: "Maze Runner",
 		Description: "post shitty earth virus and kids can survive it",
@@ -289,7 +290,7 @@ func main() {
 	// marshalling data into json
 	myJsonMovies, err := json.MarshalIndent(&myMovies, "", "   ")
 	// it returns an error if something goes wrong
-	// for the positive path it should be nil 
+	// for the positive path it should be nil
 	if err != nil {
 		log.Println("error unmarshalling json", err)
 	}
@@ -302,8 +303,8 @@ func main() {
 	}
 	log.Println(dividend)
 
-	
-	
+
+
 }
 
 func divide(x, y float32) (float32, error){
@@ -361,3 +362,6 @@ func changeFruit(f *string) {
 	newFruit := "avocado"
 	*f = newFruit
 }
+*/
+
+package main
