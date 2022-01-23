@@ -31,6 +31,7 @@ func RenderTemplate(w http.ResponseWriter, tmpl string){
 		tc, _ = CreateTemplateCache()
 	}
 
+
 	// error check if an invalid entry is put then it should stop the program
 	t, wrongtmpl := tc[tmpl] 
 	if !wrongtmpl {
